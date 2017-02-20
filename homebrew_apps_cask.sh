@@ -12,7 +12,6 @@ applications=(
     vlc
     xquartz
     mactex
-    1password
     firefox
     dropbox
     adobe-reader
