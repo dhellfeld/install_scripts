@@ -1,4 +1,5 @@
-#!/bin/bash                                                                                
+#!/bin/bash         
+                                                                       
 # Memory clean 2
 mas install 1114591412
 
