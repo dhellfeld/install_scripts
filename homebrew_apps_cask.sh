@@ -20,6 +20,7 @@ applications=(
     insomniax
     nvalt
     textwrangler
+    microsoft-office-2011
     doxygen
 )
 
