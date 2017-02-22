@@ -7,6 +7,7 @@ tools=(
     git
     wget
     emacs
+    sqlite
 )
 
 echo "Installing command line tools..."
