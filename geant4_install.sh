@@ -59,12 +59,18 @@ cmake -DGEANT4_USE_OPENGL_X11=$OPENGL_X11         \
       -DCMAKE_INSTALL_PREFIX=$install_dir         \
       ../geant4-source
 
+## Some additional geant4 build options I've used before...
+# -DCMAKE_C_COMPILER=/path/to/compiler
+# -DCMAKE_PREFIX_PATH=/Applications/Qt/5.3
+# -DQT_QMAKE_EXECUTABLE=/Applications/Qt/5.3/clang_64/bin
+# for qt, put the qmake exe in $PATH
+# more found here: http://geant4.web.cern.ch/geant4/UserDocumentation/UsersGuides/InstallationGuide/html/ch02s03.html
+
 echo "Starting make and make install..."
 make -j4;
 make install;
 
-
-echo "Writing example build script..."
+echo "Writing example build script and placing in $g4dir..."
 cd ../
 cat <<EOT>> sim_compile_script.sh
 echo "Building..."
@@ -76,14 +82,16 @@ make -j4
 echo "Done!"
 EOT
 
-
 echo "Done!"
 
 
-## Some additional geant4 build options that can be used
-# -DCMAKE_C_COMPILER=/path/to/compiler
-# -DCMAKE_PREFIX_PATH=/Applications/Qt/5.3
-# -DQT_QMAKE_EXECUTABLE=/Applications/Qt/5.3/clang_64/bin
-# for qt, put the qmake exe in $PATH
+# Print bashrc advice to screen (user can decide to use or not...)
+echo "\nAdd the following to your .bashrc or .bash_profile:\n"
+echo "# --------------------------------"
+echo "#  Geant4\n"
+echo ". ~/$g4dir/geant4-install/share/Geant4-$g4vers/geant4make/geant4make.sh"
+echo ". ~/$g4dir/geant4-install/bin/geant4.sh"
+echo "export G4WORKDIR=.\n"
+echo "# --------------------------------\n"
 
 
