@@ -22,6 +22,7 @@ applications=(
     textwrangler
     microsoft-office-2011
     doxygen
+    ubersicht
 )
 
 echo "Installing applications..."
