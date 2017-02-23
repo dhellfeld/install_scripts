@@ -23,6 +23,7 @@ applications=(
     microsoft-office-2011
     doxygen
     ubersicht
+    spectacle
 )
 
 echo "Installing applications..."
