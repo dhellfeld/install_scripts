@@ -61,4 +61,4 @@ echo "#  ROOT\n"
 echo ". ~/$cernrootdir/root-install/bin/thisroot.sh"
 echo "export PYTHONPATH=~/path/to/Anaconda"
 echo "alias root='root -l'\n"
-
+echo "# --------------------------------\n"
