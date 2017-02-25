@@ -8,6 +8,9 @@ tools=(
     wget
     emacs
     sqlite
+    glew
+    glm
+    libconfig
 )
 
 echo "Installing command line tools..."
