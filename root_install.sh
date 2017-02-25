@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Choose version (each must be two digits!) -- eventually put this into command line argument
-export MAJOR="05"
-export MINOR="34"
-export PATCH="34"
+export MAJOR="06"
+export MINOR="08"
+export PATCH="04"
 
 # Create some useful variable names
 export cernroot="root_v$((MAJOR+0)).$MINOR.$PATCH.source.tar.gz"
