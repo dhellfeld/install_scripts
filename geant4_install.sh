@@ -7,13 +7,13 @@ export PATCH="01"
 
 # Create some useful variable names
 export geant="geant4.${MAJOR}.${MINOR}.p${PATCH}.tar.gz"
-export g4dir="GEANT4.${MAJOR}.${MINOR}.p${PATCH}"
+export g4dir="GEANT4.$((MAJOR+0)).$((MINOR+0)).p$((PATCH+0))"
 export g4vers="$((MAJOR+0)).$((MINOR+0)).$((PATCH+0))"
 
 # Choose build options
 export OPENGL_X11="ON"
 export RAYTRACER_X11="ON"
-export USE_QT="ON"
+export USE_QT="OFF"
 export MULTITHREADED="OFF"  # Doesn't seem to work on macOS Sierra if "ON", known issue?
 export INSTALL_DATA="ON"
 export USE_SYSTEM_EXPAT="OFF"
@@ -71,7 +71,7 @@ make -j4;
 make install;
 
 echo "Writing example build script and placing in $g4dir..."
-cd ../
+cd $g4dir
 cat <<EOT>> sim_compile_script.sh
 echo "Building..."
 cmake -DGeant4_DIR=~/$g4dir/geant4-install/lib/Geant4-$g4vers/ .
@@ -82,8 +82,20 @@ make -j4
 echo "Done!"
 EOT
 
-echo "Done!"
+echo "Writing selected build options to file and placing in $g4dir/geant4-build..."
+cd $g4dir/geant4-build
+cat <<EOT>> BUILDOPTIONS.txt
+OPENGL_X11=$OPENGL_X11
+RAYTRACER_X11=$RAYTRACER_X11
+USE_QT=$USE_QT
+MULTITHREADED=$MULTITHREADED
+INSTALL_DATA=$INSTALL_DATA
+USE_SYSTEM_EXPAT=$USE_SYSTEM_EXPAT
+CXXSTD=$CXXSTD
+STATIC_LIBS=$STATIC_LIBS
+EOT
 
+echo "Done!"
 
 # Print bashrc advice to screen (user can decide to use or not...)
 echo "\nAdd the following to your .bashrc or .bash_profile:\n"
