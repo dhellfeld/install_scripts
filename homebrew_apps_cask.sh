@@ -24,6 +24,7 @@ applications=(
     doxygen
     ubersicht
     spectacle
+    bettertouchtool
 )
 
 echo "Installing applications..."
