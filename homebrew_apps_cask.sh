@@ -6,6 +6,7 @@ applications=(
     filezilla
     flux
     google-chrome
+    google-chrome-canary
     iterm2
     spotify
     sublime-text2
@@ -30,6 +31,7 @@ applications=(
 
 echo "Installing applications..."
 brew cask install --appdir="/Applications" ${applications[@]}
+
 
 # --
 # Still deciding whether I want to use 2011 and 2016 office, install both for now
