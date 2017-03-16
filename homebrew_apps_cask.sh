@@ -27,6 +27,7 @@ applications=(
     ubersicht
     spectacle
     bettertouchtool
+    github-desktop
 )
 
 echo "Installing applications..."
