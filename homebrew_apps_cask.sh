@@ -28,6 +28,7 @@ applications=(
     spectacle
     bettertouchtool
     github-desktop
+    virtualbox
 )
 
 echo "Installing applications..."
