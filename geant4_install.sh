@@ -9,6 +9,7 @@ export PATCH="01"
 export geant="geant4.${MAJOR}.${MINOR}.p${PATCH}.tar.gz"
 export g4dir="GEANT4.$((MAJOR+0)).$((MINOR+0)).p$((PATCH+0))"
 export g4vers="$((MAJOR+0)).$((MINOR+0)).$((PATCH+0))"
+export topdir=$PWD
 
 # Choose build options
 export OPENGL_X11="ON"
@@ -38,7 +39,7 @@ echo "Unpacking..."
 tar xf $geant -C $g4dir/geant4-source --strip-components=1
 
 echo "Moving tarball into Geant directory..."
-mv $geant $g4dir  # rm $geant
+mv $geant $g4dir
 
 
 echo "Moving to build directory..."
@@ -70,11 +71,14 @@ echo "Starting make and make install..."
 make -j4;
 make install;
 
-echo "Writing example build script and placing in $g4dir..."
-cd $g4dir
+
+echo "Writing example build script and placing in $topdir/$g4dir..."
+cd $topdir/$g4dir
 cat <<EOT>> sim_compile_script.sh
 echo "Building..."
-cmake -DGeant4_DIR=~/$g4dir/geant4-install/lib/Geant4-$g4vers/ .
+
+#cmake -DGeant4_DIR=$topdir/$g4dir/geant4-install/lib/Geant4-$g4vers/ /path/to/source/code
+cmake -DGeant4_DIR=$topdir/$g4dir/geant4-install/lib/Geant4-$g4vers/ .
 
 echo "Make..."
 make -j4
@@ -82,8 +86,8 @@ make -j4
 echo "Done!"
 EOT
 
-echo "Writing selected build options to file and placing in $g4dir/geant4-build..."
-cd $g4dir/geant4-build
+echo "Writing selected build options to file and placing in $topdir/$g4dir/geant4-build..."
+cd $topdir/$g4dir/geant4-build
 cat <<EOT>> BUILDOPTIONS.txt
 OPENGL_X11=$OPENGL_X11
 RAYTRACER_X11=$RAYTRACER_X11
@@ -101,8 +105,8 @@ echo "Done!"
 echo "\nAdd the following to your .bashrc or .bash_profile:\n"
 echo "# --------------------------------"
 echo "#  Geant4\n"
-echo ". ~/$g4dir/geant4-install/share/Geant4-$g4vers/geant4make/geant4make.sh"
-echo ". ~/$g4dir/geant4-install/bin/geant4.sh"
+echo ". $topdir/$g4dir/geant4-install/share/Geant4-$g4vers/geant4make/geant4make.sh"
+echo ". $topdir/$g4dir/geant4-install/bin/geant4.sh"
 echo "export G4WORKDIR=.\n"
 echo "# --------------------------------\n"
 
