@@ -8,6 +8,7 @@ export PATCH="04"
 # Create some useful variable names
 export cernroot="root_v$((MAJOR+0)).$MINOR.$PATCH.source.tar.gz"
 export cernrootdir="ROOT_v$((MAJOR+0)).$MINOR.$PATCH"
+export topdir=$PWD
 
 echo "Downloading source..."
 if [ ! -a "$cernroot" ]; then
@@ -26,12 +27,12 @@ echo "Unpacking..."
 tar xf $cernroot -C $cernrootdir/root-source --strip-components=1
 
 echo "Moving tarball into ROOT directory..."
-mv $cernroot $cernrootdir  # rm $cernroot
+mv $cernroot $cernrootdir
 
 
 echo "Moving to build directory..."
 cd $cernrootdir/root-build
-export install_dir=~/$cernrootdir/root-install
+export install_dir=$topdir/$cernrootdir/root-install
 
 ## Old way with configure
 #echo "Configuring ROOT..."
@@ -58,7 +59,7 @@ echo "Done!"
 echo "\nAdd the following to your .bashrc or .bash_profile:\n"
 echo "#--------------------------------"
 echo "#  ROOT\n"
-echo ". ~/$cernrootdir/root-install/bin/thisroot.sh"
-echo "export PYTHONPATH=~/path/to/Anaconda"
+echo ". $topdir/$cernrootdir/root-install/bin/thisroot.sh"
+echo "export PYTHONPATH=/path/to/Anaconda/"
 echo "alias root='root -l'\n"
 echo "# --------------------------------\n"
