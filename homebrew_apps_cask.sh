@@ -16,7 +16,6 @@ applications=(
     firefox
     dropbox
     adobe-reader
-    geektool
     google-drive
     insomniax
     nvalt
