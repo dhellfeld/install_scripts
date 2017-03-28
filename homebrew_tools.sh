@@ -11,6 +11,7 @@ tools=(
     glew
     glm
     libconfig
+    pandoc
 )
 
 echo "Installing command line tools..."
