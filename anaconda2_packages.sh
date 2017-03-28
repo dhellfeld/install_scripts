@@ -6,3 +6,6 @@ conda install -y -c openastronomy healpy
 # Mayavi
 conda install -y mayavi
 
+# Pyserial
+conda install -y pyserial
+
