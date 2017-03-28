@@ -29,6 +29,7 @@ applications=(
     github-desktop
     virtualbox
     slack
+    box-sync
 )
 
 echo "Installing applications..."
