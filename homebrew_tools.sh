@@ -12,6 +12,7 @@ tools=(
     glm
     libconfig
     pandoc
+    imagemagick
 )
 
 echo "Installing command line tools..."
