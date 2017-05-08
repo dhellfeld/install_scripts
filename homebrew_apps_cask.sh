@@ -29,6 +29,8 @@ applications=(
     virtualbox
     slack
     box-sync
+    sketchup
+    menubar-stats
 )
 
 echo "Installing applications..."
