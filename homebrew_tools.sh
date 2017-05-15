@@ -13,6 +13,7 @@ tools=(
     libconfig
     pandoc
     imagemagick
+    ffmpeg
 )
 
 echo "Installing command line tools..."
