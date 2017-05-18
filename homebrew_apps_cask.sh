@@ -31,6 +31,7 @@ applications=(
     box-sync
     sketchup
     menubar-stats
+    skype
 )
 
 echo "Installing applications..."
