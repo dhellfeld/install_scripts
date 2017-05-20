@@ -11,3 +11,6 @@ mas install 412529613
 
 # Battery health
 mas install 490192174
+
+# Menu bar stats
+mas install 714196447

@@ -30,7 +30,6 @@ applications=(
     slack
     box-sync
     sketchup
-    menubar-stats
     skype
 )
 
