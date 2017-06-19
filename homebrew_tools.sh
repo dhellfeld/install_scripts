@@ -14,6 +14,7 @@ tools=(
     pandoc
     imagemagick
     ffmpeg
+    ghi
 )
 
 echo "Installing command line tools..."
