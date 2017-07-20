@@ -31,6 +31,7 @@ applications=(
     box-sync
     sketchup
     skype
+    java
 )
 
 echo "Installing applications..."

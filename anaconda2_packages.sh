@@ -20,3 +20,6 @@ conda install joblib
 
 # Progressbar
 conda install progressbar
+
+# Excel reader
+conda install xlrd
