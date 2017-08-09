@@ -15,7 +15,10 @@ tools=(
     imagemagick
     ffmpeg
     ghi
+    libfreenect
 )
 
 echo "Installing command line tools..."
 brew install ${tools[@]}
+
+echo "\nTo install python bindings for freenect, download wrappers from git, place in brew dir, then pip install"

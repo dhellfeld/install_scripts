@@ -6,7 +6,6 @@ applications=(
     filezilla
     flux
     google-chrome
-    google-chrome-canary
     iterm2
     spotify
     sublime-text2
@@ -28,7 +27,6 @@ applications=(
     github-desktop
     virtualbox
     slack
-    box-sync
     sketchup
     skype
     java
