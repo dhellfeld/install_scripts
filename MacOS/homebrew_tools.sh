@@ -16,6 +16,7 @@ tools=(
     ffmpeg
     ghi
     libfreenect
+    tag
 )
 
 echo "Installing command line tools..."
