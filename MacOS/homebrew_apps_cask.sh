@@ -28,6 +28,7 @@ applications=(
     sketchup
     skype
     java
+    github
 )
 
 echo "Installing applications..."
@@ -47,5 +48,5 @@ cd ~/
 # Mathemtica, Matlab, DivX player, Cisco Anyconnect, Symantec Endpoint Protection
 
 # --
-# List of some opps I've used in the past
-# bettertouchtool, github-desktop
+# List of some opps I've used in the past, but not currently
+# bettertouchtool

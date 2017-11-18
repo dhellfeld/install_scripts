@@ -6,6 +6,7 @@ tools=(
     curl
     git
     wget
+    openssl
     emacs
     sqlite
     glew
