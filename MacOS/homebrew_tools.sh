@@ -17,6 +17,7 @@ tools=(
     ghi
     libfreenect
     tag
+    git-open
 )
 
 echo "Installing command line tools..."

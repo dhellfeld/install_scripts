@@ -23,8 +23,6 @@ applications=(
     doxygen
     ubersicht
     spectacle
-    bettertouchtool
-    github-desktop
     virtualbox
     slack
     sketchup
@@ -47,3 +45,7 @@ cd ~/
 # --
 # List of applications that must be installed by hand
 # Mathemtica, Matlab, DivX player, Cisco Anyconnect, Symantec Endpoint Protection
+
+# --
+# List of some opps I've used in the past
+# bettertouchtool, github-desktop
