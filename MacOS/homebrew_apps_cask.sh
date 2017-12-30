@@ -29,6 +29,9 @@ applications=(
     skype
     java
     github
+    meshlab
+    real-vnc
+    vnc-viewer
 )
 
 echo "Installing applications..."
