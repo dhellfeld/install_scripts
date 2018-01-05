@@ -19,6 +19,7 @@ tools=(
     libfreenect
     tag
     git-open
+    trash
 )
 
 echo "Installing command line tools..."
