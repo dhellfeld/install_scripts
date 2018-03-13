@@ -32,6 +32,7 @@ applications=(
     meshlab
     real-vnc
     vnc-viewer
+    cheatsheet
 )
 
 echo "Installing applications..."
