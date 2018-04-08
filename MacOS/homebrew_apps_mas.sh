@@ -17,3 +17,6 @@ mas install 1120214373
 
 # Menu bar stats
 mas install 714196447
+
+# Xcode
+mas install 497799835
