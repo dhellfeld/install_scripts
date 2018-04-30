@@ -15,7 +15,7 @@ applications=(
     firefox
     dropbox
     adobe-reader
-    google-drive
+    google-backup-and-sync
     insomniax
     nvalt
     textwrangler
@@ -32,7 +32,6 @@ applications=(
     meshlab
     real-vnc
     vnc-viewer
-    cheatsheet
 )
 
 echo "Installing applications..."
