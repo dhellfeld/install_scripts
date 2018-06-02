@@ -32,6 +32,7 @@ applications=(
     meshlab
     real-vnc
     vnc-viewer
+    forklift
 )
 
 echo "Installing applications..."
