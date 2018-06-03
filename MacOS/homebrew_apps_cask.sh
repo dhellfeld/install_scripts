@@ -33,6 +33,8 @@ applications=(
     real-vnc
     vnc-viewer
     forklift
+    itsycal
+    bartender
 )
 
 echo "Installing applications..."
