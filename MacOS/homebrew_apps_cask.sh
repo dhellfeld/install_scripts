@@ -35,6 +35,7 @@ applications=(
     forklift
     itsycal
     bartender
+    cloudcompare
 )
 
 echo "Installing applications..."
