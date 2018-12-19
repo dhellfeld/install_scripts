@@ -15,6 +15,7 @@ export topdir=$PWD
 export OPENGL_X11="ON"
 export RAYTRACER_X11="ON"
 export USE_QT="OFF"
+export USE_GDML="OFF"
 export MULTITHREADED="OFF"  # Doesn't seem to work on macOS Sierra if "ON", known issue?
 export INSTALL_DATA="ON"
 export USE_SYSTEM_EXPAT="OFF"
@@ -51,6 +52,7 @@ echo "Starting build with cmake..."
 cmake -DGEANT4_USE_OPENGL_X11=$OPENGL_X11         \
       -DGEANT4_USE_RAYTRACER_X11=$RAYTRACER_X11   \
       -DGEANT4_USE_QT=$USE_QT                     \
+      -DGEANT4_USE_GDML=$USE_GDML                 \
       -DBUILD_STATIC_LIBS=$STATIC_LIBS            \
       -DGEANT4_BUILD_CXXSTD=$CXXSTD               \
       -DGEANT4_BUILD_MULTITHREADED=$MULTITHREADED \
@@ -92,6 +94,7 @@ cat <<EOT>> BUILDOPTIONS.txt
 OPENGL_X11=$OPENGL_X11
 RAYTRACER_X11=$RAYTRACER_X11
 USE_QT=$USE_QT
+USE_GDML=$USE_GDML
 MULTITHREADED=$MULTITHREADED
 INSTALL_DATA=$INSTALL_DATA
 USE_SYSTEM_EXPAT=$USE_SYSTEM_EXPAT
