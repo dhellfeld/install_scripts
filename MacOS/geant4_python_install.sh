@@ -23,7 +23,12 @@ if [ -d "$g4dir" ]; then
 	# Make
 	make
 	make install
-	
+
+	# Print bashrc advice to screen (user can decide to use or not...)
+	echo "\nAdd the following to your .bashrc or .bash_profile:\n"
+	echo "export PYTHONPATH=$PYTHONPATH:$g4dir/geant4-source/environments/g4py/lib"
+	echo "export PYTHONPATH=$PYTHONPATH:$g4dir/geant4-source/environments/g4py/tests"
+		
 else
 	echo "Cannot find Geant4 directory: $g4dir"
 fi
