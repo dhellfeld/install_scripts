@@ -24,7 +24,7 @@ export STATIC_LIBS="OFF"
 
 echo "Downloading source..."
 if [ ! -a "$geant" ]; then
-    curl -O http://geant4.cern.ch/support/source/$geant
+    curl -OL http://geant4.cern.ch/support/source/$geant
 fi
 
 echo "Organizing directories..."
