@@ -20,9 +20,7 @@ tools=(
     tag
     git-open
     trash
-    xerces-c
-    boost
-    boost-python
+    gdrive
 )
 
 echo "Installing command line tools..."
